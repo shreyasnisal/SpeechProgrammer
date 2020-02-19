@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<style>
+    .center{
+        text-align: center;
+    }
+    .container{
+        padding: 3rem;
+    }
+    .purple{
+        color: mediumpurple;
+    }
+</style>
+
+<h1 class="center">Speech Programmer</h1>
+
+<div class='container'>
+    <h2 class='purple'>About</h2>
+    <div>
+        <p>The speech programmer is a web tool aimed at writing code based on voice commands. As of now, the tool only writes C code, and its usage is dependent upon various conditions that must be met when giving voice commands. Read this documentation to understand the proper usage of this tool for the best results.</p>
+    </div>
+    
+    <h2 class='purple'>Usage</h2>
+    
+    <h3><u>Libraries</u></h3>
+    <div>
+        <ul>
+            <li>To include a library, start the command with the word <i>include</i>.</li>
+            <li>Follow the <i>include</i> word by the name of the library to be included.</li>
+            <li>Do <b>not</b> use the <i>.h</i> in your command; this is included automatically when the include statement is written.</li>
+            <li>Do not use the word <i>hash</i> or similar in your command. This is also added automatically.</li>
+            <li>Include statements are always added at the top of the file.</li>
+        </ul>
+    </div>
+    
+    <h3><u>Data Types</u></h3>
+    <div>
+        <p>To use data types throughout the tool, use the following conventions:</p>
+        <ul>
+            <li>To use the <tt>int</tt> data type, use the word <i>integer</i>.</li>
+            <li>To use the <tt>char</tt> data type, use the word <i>character</i>.</li>
+            <li>To use the <tt>double</tt> or <tt>float</tt> data types, use the corresponding word itself.</li>
+        </ul>
+    </div>
+    
+    <h3><u>Functions</u></h3>
+    <div>
+        <ul>
+            <li>To define a new function, start the command with the word <i>function</i>.</li>
+            <li>The word <i>function</i> must be immediately succeeded by the return type of the function.</li>
+            <li>Follow the return type with the name of the function. The name of a function can be as long as required, and will automatically be converted to camel case.</li>
+            <li>To pass parameters to the function, use the word <i>takes</i> after the name of the function. This word must then be succeeded by the return type of each parameter and the parameter name.</li>
+        </ul>
+        <div>
+            <p>Example:</p>
+            <p><b>Voice command: </b>function integer calculate average takes integer 'size'</p>
+            <p><b>Function Written: </b><tt>int calculateAverage(int size) {}</tt></p>
+        </div>
+    </div>
+    
+    <h3><u>Variables</u></h3>
+    <div>
+        <ul>
+            <li>To declare a variable, start the voice command with the data type of the variable. (Remember to use the above given conventions for data types)</li>
+            <li>Follow the data type with the name of the variable. The name of the variable can be as long as required, and will automatically be converted to camel case.</li>
+            <li>However, you may only declare <u>one</u> variable per line.</li>
+            <li>To initialize a variable while declaring it, follow the name of the variable with the word <i>equals</i>, then give it the initial value.</li>
+        </ul>
+    </div>
+</div>
