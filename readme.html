@@ -10,6 +10,10 @@
     .purple{
         color: mediumpurple;
     }
+    .example{
+        background-color: #eee;
+        padding: 1rem;
+    }
 </style>
 
 
@@ -52,7 +56,7 @@
             <li>Follow the return type with the name of the function. The name of a function can be as long as required, and will automatically be converted to camel case.</li>
             <li>To pass parameters to the function, use the word <i>takes</i> after the name of the function. This word must then be succeeded by the return type of each parameter and the parameter name.</li>
         </ul>
-        <div>
+        <div class="example">
             <p>Example:</p>
             <p><b>Voice command: </b>function integer calculate average takes integer 'size'</p>
             <p><b>Function Written: </b><tt>int calculateAverage(int size) {}</tt></p>
@@ -68,5 +72,46 @@
             <li>To initialize a variable while declaring it, follow the name of the variable with the word <i>equals</i>, then give it the initial value.</li>
             <li>Characters will automatically be initialized within single quotes.</li>
         </ul>
+        <div class="example">
+            <p>Example-1:</p>
+            <p><b>Voice command: </b>integer size equals 5</p>
+            <p><b>Statement Written: </b><tt>int size = 5;</tt></p>
+        </div>
+        <div class="example">
+            <p>Example-2</p>
+            <p><b>Voice command: </b>character test equals p</p>
+            <p><b>Statement Written: </b><tt>char test = 'p';</tt></p>
+        </div>
+    </div>
+    
+    <h3>Printf</h3>
+    <div>
+        <ul>
+            <li>To use the printf function, start the command with the word <i>print</i>.</li>
+            <li>Follow the word with the quote to print.</li>
+            <li>To use a variable in the quote, use the word <i>percent</i>/<i>percentage</i> in the quote. No need to use the identifier, such as 'd'; identifiers will be added automatically based on the variable's data type.</li>
+            <li>To specify the variable to be used instead of the placeholder, use the word <i>variable</i>.</li>
+            <li>Following the word <i>variable</i>, say the name of the variable to be used.</li>
+            <li>To add a newline(\n)in the print quote, use the word <i>line</i>.</li>
+        </ul>
+    </div>
+    <div class="example">
+        <p>Example:</p>
+        <p><b>Voice command: </b>print the value of test is percent line variable test</p>
+        <p><b>Statement written: </b><tt>printf("the value of test is %d\n ", test);</tt></p>
+    </div>
+    
+    <h3>Scanf</h3>
+    <div>
+        <ul>
+            <li>To use the scanf function,  start the command with the word <i>scan</i>.</li>
+            <li>Follow the word with the names of variables to be scanned. Format identifiers or a quote for scanf is not required. The quote will be written automatically based on the data types of variables.</li>
+            <li>The word <i>ampersand</i>/<i>and</i> is not required before each variable either. The '&' symbol is added automatically before each variable.</li>
+        </ul>
+    </div>
+    <div class="example">
+        <p>Example:</p>
+        <p><b>Voice command: </b>scanf test, size</p>
+        <p><b>Statement Written: </b><tt>scanf("%f%d", &test, &size);</tt></p>
     </div>
 </div>

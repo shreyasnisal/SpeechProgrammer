@@ -312,6 +312,72 @@
             textAfter = programTextArea.value.substring(programTextArea.selectionEnd, programTextArea.value.length);
         }
         
+        
+//        if (splitWords[0] === 'if') {
+//            var varName = '';
+//            var wordCount = 0;
+//            var condition = '';
+//            var i;
+//            
+//            if (splitWords[1] === 'variable') {
+//                for (var j = 2; j < splitWords.length && (splitWords[j] !== 'greater' || splitWords[j] !== 'less' || splitWords[j] !== 'equals'); j++) {
+//                    if (wordCount === 0)
+//                        varName += splitWords[j];
+//                    else
+//                        varName += splitWords[j].replace(/^./, splitWords[j][0].toUpperCase());
+//                    
+//                    
+//                    i = j;
+//                }
+//                
+//                condition += varName;
+//            }
+//            else {
+//                condition += isNaN(splitWords[1]) ? '\'' + splitWords[1][0] + '\'' : splitWords[1];
+//                i = 1;
+//            }
+//            
+//            
+//            if (splitWords[i+1] === 'greater' && splitWords[i+2] === 'equals') {
+//                condition += ' >= ';
+//                i += 3;
+//            }
+//            else if (splitWords[i+1] === 'greater') {
+//                condition += ' > ';
+//                i += 2;
+//            }
+//            else if (splitWords[i+1] === 'less' && splitWords[i+2] === 'equals') {
+//                condition += ' <= ';
+//                i += 3
+//            }
+//            else if (splitWords[i+1] === 'less') {
+//                condition += ' < ';
+//                i += 2;
+//            }
+//            else if (splitWords[i+1] === 'equals') {
+//                condition += ' == ';
+//                i += 2;
+//            }
+//            
+//            
+//            if (splitWords[i] === 'variable') {
+//                for (var j = 2; j < splitWords.length && (splitWords[j] !== 'greater' || splitWords[j] !== 'less' || splitWords[j] !== 'equals'); j++) {
+//                    if (wordCount === 0)
+//                        varName += splitWords[j];
+//                    else
+//                        varName += splitWords[j].replace(/^./, splitWords[j][0].toUpperCase());
+//                    
+//                    
+//                    i = j;
+//                }
+//                
+//                condition += varName;
+//            }
+//            else {
+//                condition += isNaN(splitWords[i]) ? '\'' + splitWords[i][0] + '\'' : splitWords[i];
+//            }
+//        }
+        
         transcript = '';
         splitWords = [];
     }
