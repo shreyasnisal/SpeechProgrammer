@@ -1,0 +1,100 @@
+body {
+  background-color: #2d2d30;
+  color: #eee;
+}
+
+.half-screen {
+  width: 50%;
+}
+
+.right {
+  float: right;
+}
+
+.left {
+  float: left;
+}
+
+.full-height {
+  height: 95vh;
+}
+
+textarea {
+  width: 100%;
+  height: 100%;
+  min-width: 250px;
+  background-color: #1e1e1e;
+  border: none;
+  color: #ccc;
+  font-size: 1.2rem;
+}
+
+::placeholder {
+  color: #818180;
+}
+
+.left h1 {
+  padding-left: 20px;
+}
+
+.instructions {
+  padding-right: 20px;
+  padding-left: 20px;
+  font-size: 1.2rem;
+}
+
+.center{
+    text-align: center;
+}
+.container{
+    padding: 3rem;
+}
+.purple{
+    color: mediumpurple;
+}
+.example{
+    background-color: #555;
+    padding: 1rem;
+}
+
+a {
+  color: mediumpurple;
+  text-decoration: none;
+}
+
+.btn-container {
+  display: flex;
+  margin-left: 20px;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #818180;
+  border: 1px #000 solid;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+  color: #eee;
+  font-size: 1.5rem;
+  cursor: pointer;
+  font-family: monospace;
+}
+
+.start {
+  color: greenyellow;
+}
+
+.clear {
+  color: darkred;
+}
+
+.contributing {
+  padding-left: 20px;
+}
+
+.contributing p {
+  padding-right: 20px;
+  font-size: 1.2rem;
+}
