@@ -8,15 +8,17 @@ body {
 }
 
 .half-screen {
-  width: 50%;
+  width: 45%;
 }
 
 .right {
   float: right;
+  margin-right: 2.5%;
 }
 
 .left {
   float: left;
+  margin-left: 2.5%;
 }
 
 .full-height {
@@ -40,12 +42,12 @@ textarea {
 }
 
 .left h1 {
-  padding-left: 20px;
+  /* padding-left: 20px; */
 }
 
 .instructions {
   padding-right: 20px;
-  padding-left: 20px;
+  /* padding-left: 20px; */
   font-size: 1.2rem;
 }
 
@@ -70,7 +72,7 @@ a {
 
 .btn-container {
   display: flex;
-  margin-left: 20px;
+  /* margin-left: 20px; */
 }
 
 .btn {
@@ -97,7 +99,7 @@ a {
 }
 
 .contributing {
-  padding-left: 20px;
+  /* padding-left: 20px; */
 }
 
 .contributing p {
