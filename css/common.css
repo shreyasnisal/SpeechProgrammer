@@ -4,7 +4,7 @@ html {
 
 body {
   background-color: #2d2d30;
-  color: #eee;
+  color: #ccc;
 }
 
 .half-screen {
@@ -67,7 +67,7 @@ textarea {
 
 a {
   color: mediumpurple;
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 .btn-container {
@@ -76,10 +76,11 @@ a {
 }
 
 .btn {
+  text-decoration: none;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #818180;
+  background-color: #555;
   border: 1px #000 solid;
   border-radius: 5px;
   padding: 10px;
@@ -90,13 +91,13 @@ a {
   font-family: monospace;
 }
 
-.start {
+/* .start {
   color: greenyellow;
 }
 
 .clear {
   color: darkred;
-}
+} */
 
 .contributing {
   /* padding-left: 20px; */
