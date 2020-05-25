@@ -56,6 +56,10 @@ recognition.onresult = function(event) {
     if (splitWords[0] === 'if') {
         ifStatement();
     }
+
+    if(splitWords[0] === 'while'){
+        loops();
+    }
     // if (splitWords[0] === 'else') {
     //
     // }
