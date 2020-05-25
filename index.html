@@ -36,12 +36,26 @@
     </div>
 
 
-    <div class="half-screen right full-height">
-        <textarea id="program-text-area" rows=20 cols=100 placeholder="//Code appears here"></textarea>
+    <div id="container" class="half-screen right full-height">
+        <!-- <textarea id="program-text-area" rows=20 cols=100 placeholder="//Code appears here"></textarea> -->
     </div>
 
-
-  </body>
+    <script src="./node_modules/monaco-editor/min/vs/loader.js"></script>
+    <script>
+      require.config({ paths: { 'vs': '../node_modules/monaco-editor/min/vs' }});
+    
+      require(['vs/editor/editor.main'], function() {
+        var editor = monaco.editor.create(document.getElementById('container'), {
+          value: "",
+          language: 'c',
+          roundedSelection: false,
+	        scrollBeyondLastLine: false,
+	        readOnly: false,
+	        theme: "vs-dark",
+        });
+      });
+    </script>
+  </body> 
   <script src="js/voicerecog.js"></script>
   <script src="js/buttonFunctions.js"></script>
   <script src="js/utilFunctions.js"></script>

@@ -1,0 +1,23 @@
+{
+  "name": "speechprogrammer",
+  "version": "1.0.0",
+  "description": "Speech Programmer is a web app which generates code from speech. Current support is only for code in C language, and the speaker has to follow specific rules while speaking. You could try out the live app here(https://www.shreyasnisal.com/SpeechProgrammer/).",
+  "main": "index.js",
+  "dependencies": {
+    "monaco-editor": "^0.20.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shreyasnisal/SpeechProgrammer.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shreyasnisal/SpeechProgrammer/issues"
+  },
+  "homepage": "https://github.com/shreyasnisal/SpeechProgrammer#readme"
+}
