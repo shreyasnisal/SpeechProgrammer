@@ -66,12 +66,13 @@
     `], { type: 'text/javascript' }));
 
     require(["vs/editor/editor.main"], function () {
-    let editor = monaco.editor.create(document.getElementById('text-editor-container'), {
-      value: [
-      ].join('\n'),
-      language: 'c',
-      theme: 'vs-dark'
-    });
+      let editor = monaco.editor.create(document.getElementById('text-editor-container'), {
+        value: [
+        ].join('\n'),
+        language: 'c',
+        theme: 'vs-dark'
+      });
+      programTextArea = editor;
     });
   </script>
 </html>
