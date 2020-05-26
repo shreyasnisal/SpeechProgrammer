@@ -47,8 +47,8 @@ function printf() {
   programTextArea.selectionEnd = programTextArea.selectionEnd - textAfter.length;
 
 
-  textBefore = programTextArea.value.substring(0, programTextArea.selectionStart);
-  textAfter = programTextArea.value.substring(programTextArea.selectionEnd, programTextArea.value.length);
+  textBefore = programTextArea.getValue().substring(0, programTextArea.getSelection().getStartPosition());
+  textAfter = programTextArea.getValue().substring(programTextArea.getSelection().selectionEnd, programTextArea.getValue().length);
 }
 
 
@@ -85,6 +85,6 @@ function scanf() {
   programTextArea.selectionEnd = programTextArea.selectionEnd - textAfter.length;
 
 
-  textBefore = programTextArea.value.substring(0, programTextArea.selectionStart);
-  textAfter = programTextArea.value.substring(programTextArea.selectionEnd, programTextArea.value.length);
+  textBefore = programTextArea.getValue().substring(0, programTextArea.getSelection().getStartPosition());
+  textAfter = programTextArea.getValue().substring(programTextArea.getSelection().selectionEnd, programTextArea.getValue().length);
 }
