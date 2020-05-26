@@ -12,7 +12,7 @@ function loops() {
     programTextArea.selectionEnd = programTextArea.selectionEnd - textAfter.length;
     programTextArea.selectionEnd = programTextArea.selectionEnd - 2;
   
-    textBefore = programTextArea.value.substring(0, programTextArea.selectionStart);
-    textAfter = programTextArea.value.substring(programTextArea.selectionEnd, programTextArea.value.length);
+    textBefore = programTextArea.getValue().substring(0, programTextArea.getSelection().getStartPosition());
+    textAfter = programTextArea.getValue().substring(programTextArea.getSelection().selectionEnd, programTextArea.getValue().length);
   }
   
