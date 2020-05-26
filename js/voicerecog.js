@@ -55,11 +55,15 @@ recognition.onresult = function(event) {
     }
     if (splitWords[0] === 'if') {
         ifStatement();
-    }
+    } 
     // if (splitWords[0] === 'else') {
     //
     // }
-
+    if(splitWords[0]=='out'){
+    braceOut();
+    }
     transcript = '';
     splitWords = [];
+
 }
+
