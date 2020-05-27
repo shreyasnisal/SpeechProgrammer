@@ -1,6 +1,5 @@
 function clearCode(event) {
-  console.log('Clear code');
-  programTextArea.value = '';
+  programTextArea.setValue('');
 }
 
 function startStopButton(event) {

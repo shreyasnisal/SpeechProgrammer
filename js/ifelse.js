@@ -1,17 +1,23 @@
 function ifStatement() {
-  var condition = 'if (';
+	var condition = 'if (';
 
-  condition += getCondition();
+	condition += getCondition();
 
-  condition += ') {\n\n}';
+	condition += ') {\n\n}';
 
-  programTextArea.value = textBefore + condition + textAfter;
+	programTextArea.executeEdits("", [{
+		range: {
+			startLineNumber: programTextArea.getPosition().lineNumber, 
+			startColumn: programTextArea.getPosition().column,
+			endLineNumber: programTextArea.getPosition().lineNumber, 
+			endColumn: programTextArea.getPosition().column
+		},
+		text: condition,
+		forceMoveMarkers: true
+	}]);
 
-  programTextArea.focus();
+	programTextArea.setPosition({lineNumber: programTextArea.getPosition().lineNumber - 1, column: programTextArea.getPosition().columnNumber + 2})
 
-  programTextArea.selectionEnd = programTextArea.selectionEnd - textAfter.length;
-  programTextArea.selectionEnd = programTextArea.selectionEnd - 2;
+	programTextArea.focus();
 
-  textBefore = programTextArea.value.substring(0, programTextArea.selectionStart);
-  textAfter = programTextArea.value.substring(programTextArea.selectionEnd, programTextArea.value.length);
 }

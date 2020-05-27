@@ -1,18 +1,23 @@
 function loops() {
-    var condition = 'while (';
+  var condition = 'while (';
   
-    condition += getCondition();
+  condition += getCondition();
   
-    condition += ') {\n\n}';
+  condition += ') {\n\n}';
+
+  programTextArea.executeEdits("", [{
+    range: {
+        startLineNumber: programTextArea.getPosition().lineNumber, 
+        startColumn: programTextArea.getPosition().column,
+        endLineNumber: programTextArea.getPosition().lineNumber, 
+        endColumn: programTextArea.getPosition().column
+    },
+    text: condition,
+    forceMoveMarkers: true
+  }]);
+
+  programTextArea.setPosition({lineNumber: programTextArea.getPosition().lineNumber - 1, column: programTextArea.getPosition().columnNumber + 2})
   
-    programTextArea.value = textBefore + condition + textAfter;
-  
-    programTextArea.focus();
-  
-    programTextArea.selectionEnd = programTextArea.selectionEnd - textAfter.length;
-    programTextArea.selectionEnd = programTextArea.selectionEnd - 2;
-  
-    textBefore = programTextArea.getValue().substring(0, programTextArea.getSelection().getStartPosition());
-    textAfter = programTextArea.getValue().substring(programTextArea.getSelection().selectionEnd, programTextArea.getValue().length);
-  }
+  programTextArea.focus();
+}
   

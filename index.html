@@ -40,40 +40,18 @@
         <!-- <textarea id="program-text-area" rows=20 cols=100 placeholder="//Code appears here"></textarea> -->
     </div>
 
-
+    <script src="js/voicerecog.js"></script>
+    <script src="js/buttonFunctions.js"></script>
+    <script src="js/utilFunctions.js"></script>
+    <script src="js/includeLibraries.js"></script>
+    <script src="js/functions.js"></script>
+    <script src="js/variables.js"></script>
+    <script src="js/iofunctions.js"></script>
+    <script src="js/ifelse.js"></script>
+    <script src = 'js/loops.js'></script>
+    <script src="js/braces.js"></script>
+    <script src="https://unpkg.com/monaco-editor@latest/min/vs/loader.js"></script>
+    <script src="js/monacoEditor.js"></script>
+  
   </body>
-  <script src="js/voicerecog.js"></script>
-  <script src="js/buttonFunctions.js"></script>
-  <script src="js/utilFunctions.js"></script>
-  <script src="js/includeLibraries.js"></script>
-  <script src="js/functions.js"></script>
-  <script src="js/variables.js"></script>
-  <script src="js/iofunctions.js"></script>
-  <script src="js/ifelse.js"></script>
-  <script src = 'js/loops.js'></script>
-  <script src="js/braces.js"></script>
-
-
-  <script src="https://unpkg.com/monaco-editor@latest/min/vs/loader.js"></script>
-  <script>
-    require.config({ paths: { 'vs': 'https://unpkg.com/monaco-editor@latest/min/vs' }});
-    window.MonacoEnvironment = { getWorkerUrl: () => proxy };
-
-    let proxy = URL.createObjectURL(new Blob([`
-    self.MonacoEnvironment = {
-      baseUrl: 'https://unpkg.com/monaco-editor@latest/min/'
-    };
-    importScripts('https://unpkg.com/monaco-editor@latest/min/vs/base/worker/workerMain.js');
-    `], { type: 'text/javascript' }));
-
-    require(["vs/editor/editor.main"], function () {
-      let editor = monaco.editor.create(document.getElementById('text-editor-container'), {
-        value: [
-        ].join('\n'),
-        language: 'c',
-        theme: 'vs-dark'
-      });
-      programTextArea = editor;
-    });
-  </script>
 </html>
