@@ -1,19 +1,32 @@
-function braceOut(){
-    var brace ='}';
-    var condition = "\n\n";
-    console.log(brace); 
-    if(textAfter.length>0 &&textAfter.indexOf(brace) > -1){
-       
-        programTextArea.value =textBefore + textAfter + condition;
 
-  programTextArea.focus();
+// function to come out of closes brace
+// called when the user says the 'out'
+function braceOut() {
 
-  programTextArea.selectionEnd = programTextArea.selectionEnd - textAfter.length;
-  // programTextArea.selectionEnd = programTextArea.selectionEnd + 2;
+  // iterate from current position to end of the textarea
+  for (let i = programTextArea.getPosition().lineNumber; i <= programTextArea.getModel().getLineCount(); i++) {
 
-  textBefore = programTextArea.value.substring(0, programTextArea.selectionStart);
-  textAfter = programTextArea.value.substring(programTextArea.selectionEnd, programTextArea.value.length);
-}
+    // ADD CODE HERE TO SKIP LEADING TABS
 
-    
+    // check if the line content is a brace
+    if (programTextArea.getModel().getLineContent(i) === '}') {
+
+      // set cursor to line of the brace
+      programTextArea.setPosition({lineNumber: i, column: 2});
+
+      // add newline after coming out of a brace
+      programTextArea.executeEdits("", [{
+        range: {
+          startLineNumber: programTextArea.getPosition().lineNumber,
+          startColumn: programTextArea.getPosition().column,
+          endLineNumber: programTextArea.getPosition().lineNumber,
+          endColumn: programTextArea.getPosition().column
+        },
+        text: '\n',
+        forceMoveMarkers: true
+      }])
+
+      break; // brace was found, so stop iterating further
+    }
+  }
 }

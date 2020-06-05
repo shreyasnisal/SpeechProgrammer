@@ -1,17 +1,26 @@
 function ifStatement() {
-  var condition = 'if (';
+	var statement = 'if ('; //
+	statement += getCondition();  //get condition for if statement
+	statement += ') {\n\n}'; //add closing paranthesis and braces
 
-  condition += getCondition();
+	//add statement to textarea
+	programTextArea.executeEdits("", [{
+		range: {
+			startLineNumber: programTextArea.getPosition().lineNumber,
+			startColumn: programTextArea.getPosition().column,
+			endLineNumber: programTextArea.getPosition().lineNumber,
+			endColumn: programTextArea.getPosition().column
+		},
+		text: statement,
+		forceMoveMarkers: true
+	}]);
 
-  condition += ') {\n\n}';
+	//reset cursor to between braces
+	programTextArea.setPosition({lineNumber: programTextArea.getPosition().lineNumber - 1, column: programTextArea.getPosition().columnNumber + 2})
 
-  programTextArea.value = textBefore + condition + textAfter;
+	indent++; //new braces added, increment indent
+	autoIndent(); //call function to implement auto indent
 
-  programTextArea.focus();
+	programTextArea.focus(); //focus on textarea
 
-  programTextArea.selectionEnd = programTextArea.selectionEnd - textAfter.length;
-  programTextArea.selectionEnd = programTextArea.selectionEnd - 2;
-
-  textBefore = programTextArea.value.substring(0, programTextArea.selectionStart);
-  textAfter = programTextArea.value.substring(programTextArea.selectionEnd, programTextArea.value.length);
 }

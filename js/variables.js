@@ -1,39 +1,45 @@
 function newVariable() {
-  var dataType = splitWords[0];
 
-  var varName = splitWords[1];
+    var dataType = splitWords[0]; //data type of variable
+    var statement = ''; //entire statement to be added to program
+    var i;
 
-  var statement = '';
+    var varName = splitWords[1]; //name of variable
+    //continue adding to name until user has said 'equals' for initialization
+    for (i = 2; i < splitWords.length && splitWords[i] !== 'equals'; i++) {
+        varName += splitWords[i].replace(/^./, splitWords[i][0].toUpperCase()); //variable name in camel case
+    }
 
-  var i;
+    statement += dataType + ' ' + varName; //add variable data type and name to statement
 
-  for (i = 2; i < splitWords.length && splitWords[i] !== 'equals'; i++) {
-      varName += splitWords[i].replace(/^./, splitWords[i][0].toUpperCase());
-  }
+    //variable initialization
+    if (splitWords[i] === 'equals') {
+        // if character, do initialization inside single quotes
+        // may need change, since characters can also be initialized with integer values
+        if (dataType === 'char') {
+            statement += ' = \'' + splitWords[i+1][0] + '\'';
+        }
+        else {
+            statement += ' = ' + splitWords[i+1];
+        }
+    }
 
-  statement += dataType + ' ' + varName;
+    variables[varName] = dataType; //add variable to variables object, with data type
 
-  if (splitWords[i] === 'equals') {
+    statement += ';\n'; //add semicolon and newline to statement
 
-      if (dataType === 'char') {
-          statement += ' = \'' + splitWords[i+1][0] + '\'';
-      }
-      else {
-          statement += ' = ' + splitWords[i+1];
-      }
-  }
+    // add statement to program textarea
+    programTextArea.executeEdits("", [{
+        range: {
+            startLineNumber: programTextArea.getPosition().lineNumber,
+            startColumn: programTextArea.getPosition().column,
+            endLineNumber: programTextArea.getPosition().lineNumber,
+            endColumn: programTextArea.getPosition().column
+        },
+        text:  statement,
+        forceMoveMarkers: true
+    }]);
 
-  variables[varName] = dataType;
-
-  statement += ';\n';
-
-  programTextArea.value = textBefore + statement + textAfter;
-
-  programTextArea.focus();
-
-  programTextArea.selectionEnd = programTextArea.selectionEnd - textAfter.length;
-
-
-  textBefore = programTextArea.value.substring(0, programTextArea.selectionStart);
-  textAfter = programTextArea.value.substring(programTextArea.selectionEnd, programTextArea.value.length);
+    autoIndent(); //call function to implement auto indent
+    programTextArea.focus(); // set focus on textarea
 }
