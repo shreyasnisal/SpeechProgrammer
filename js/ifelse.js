@@ -1,7 +1,7 @@
 function ifStatement() {
 	var statement = 'if ('; //
 	statement += getCondition();  //get condition for if statement
-	statement += ') {\n\n}'; //add closing paranthesis and braces
+	statement += ') {\n\n'; //add closing paranthesis and braces
 
 	//add statement to textarea
 	programTextArea.executeEdits("", [{
@@ -12,6 +12,20 @@ function ifStatement() {
 			endColumn: programTextArea.getPosition().column
 		},
 		text: statement,
+		forceMoveMarkers: true
+	}]);
+
+	autoIndent() //implement indentation for closing brace of if statement
+
+	// add closing brace to textarea
+	programTextArea.executeEdits("", [{
+		range: {
+			startLineNumber: programTextArea.getPosition().lineNumber,
+			startColumn: programTextArea.getPosition().column,
+			endLineNumber: programTextArea.getPosition().lineNumber,
+			endColumn: programTextArea.getPosition().column
+		},
+		text: '}',
 		forceMoveMarkers: true
 	}]);
 
