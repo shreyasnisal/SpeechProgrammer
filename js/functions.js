@@ -46,11 +46,25 @@ function newFunction() {
             endLineNumber: programTextArea.getPosition().lineNumber,
             endColumn: programTextArea.getPosition().column
         },
-        text: '\n' + returnType + ' ' + funcName + '(' + argumentString + ') {\n' + '\n}',
+        text: '\n' + returnType + ' ' + funcName + '(' + argumentString + ') {\n' + '\n',
         forceMoveMarkers: true
     }]);
 
-    programTextArea.setPosition({lineNumber: programTextArea.getPosition().lineNumber - 1, column: 4})
+    autoIndent() // implement indentation for closing brace
+
+    // add closing brace to textarea
+    programTextArea.executeEdits("", [{
+  		range: {
+  			startLineNumber: programTextArea.getPosition().lineNumber,
+  			startColumn: programTextArea.getPosition().column,
+  			endLineNumber: programTextArea.getPosition().lineNumber,
+  			endColumn: programTextArea.getPosition().column
+  		},
+  		text: '}',
+  		forceMoveMarkers: true
+  	}]);
+
+    programTextArea.setPosition({lineNumber: programTextArea.getPosition().lineNumber - 1, column: 4}) // set cursor between braces
     indent++; // since we added new braces, increment indent
     autoIndent(); // call function to implement indent
     programTextArea.focus() //focus on textare
