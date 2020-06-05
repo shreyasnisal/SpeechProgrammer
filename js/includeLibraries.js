@@ -9,7 +9,7 @@ function includeLibrary() {
   for (var i = 1; i < splitWords.length; i++) {
       libName += splitWords[i].toLowerCase();
   }
-
+  
   // add the text to the program textarea
   programTextArea.executeEdits("", [{
     range: {
