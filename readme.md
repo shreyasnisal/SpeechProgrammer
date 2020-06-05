@@ -4,7 +4,7 @@ Speech Programmer is a web app which generates code from speech. Current support
 
 ## Running the app
 
-The app requires to installation at all. Once you clone/download the project, just open index.html in your web browser, and start using the app!
+The app requires no installation at all. Once you clone/download the project, just open index.html in your web browser, and start using the app!
 
 
 ## Contributing
