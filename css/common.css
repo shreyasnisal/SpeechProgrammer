@@ -5,6 +5,21 @@ html {
 body {
   background-color: #2d2d30;
   color: #ccc;
+  transition: all 2s;
+}
+
+a {
+  color: mediumpurple;
+  text-decoration: underline;
+}
+
+.light-theme {
+  background-color: #eee;
+  color: #333;
+}
+
+.light-theme a {
+  color: blue;
 }
 
 .half-screen {
@@ -25,29 +40,12 @@ body {
   height: 95vh;
 }
 
-textarea {
-  width: 100%;
-  height: 100%;
-  min-width: 250px;
-  background-color: #1e1e1e;
-  border: none;
-  color: #ccc;
-  font-size: 1.2rem;
-  padding: 10px;
-  font-family: Consolas, monospace;
-}
-
-::placeholder {
-  color: #818180;
-}
-
-.left h1 {
-  /* padding-left: 20px; */
+#text-editor-container {
+  transition: all 2s;
 }
 
 .instructions {
   padding-right: 20px;
-  /* padding-left: 20px; */
   font-size: 1.2rem;
 }
 
@@ -65,23 +63,19 @@ textarea {
     padding: 1rem;
 }
 
-a {
-  color: mediumpurple;
-  text-decoration: underline;
-}
-
 .btn-container {
   display: flex;
-  /* margin-left: 20px; */
 }
 
-.btn {
+.btn,
+.light-theme .btn {
   text-decoration: none;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: #555;
-  border: 1px #000 solid;
+  /* border: 1px #000 solid; */
+  border: none;
   border-radius: 5px;
   padding: 10px;
   margin: 10px;
@@ -89,6 +83,12 @@ a {
   font-size: 1.5rem;
   cursor: pointer;
   font-family: monospace;
+  transition: all 2s;
+}
+
+.light-theme .btn {
+  background-color: #fff;
+  color: #000;
 }
 
 .contributing p {
