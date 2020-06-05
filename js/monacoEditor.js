@@ -1,4 +1,6 @@
 
+// monaco text editor, used in VS-code
+// gives line numbers and syntax highlighting
 
 require.config({ paths: { 'vs': 'https://unpkg.com/monaco-editor@latest/min/vs' }});
 
@@ -20,6 +22,6 @@ require(["vs/editor/editor.main"], function () {
         formatOnPaste: true,
       });
 
-      
+
       programTextArea = editor;
 });
