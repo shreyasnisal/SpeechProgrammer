@@ -24,3 +24,15 @@ function startStopButton(event) {
         recognition.stop();
     }
 }
+
+// function to switch between light and dark themes
+function changeTheme(event) {
+
+  // add light-theme css to body
+  document.body.classList.toggle('light-theme');
+
+  // change theme of monaco editor with a delay
+  setTimeout(function() {
+    programTextArea._themeService.getTheme().id === 'vs vs' ? monaco.editor.setTheme('vs-dark') : monaco.editor.setTheme('vs-light');
+  }, 1000);
+}
