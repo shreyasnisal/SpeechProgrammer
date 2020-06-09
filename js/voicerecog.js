@@ -60,6 +60,12 @@ recognition.onresult = function(event) {
     if(splitWords[0]=='out'){
         braceOut();
     }
+    if(splitWords[0]==='else' && splitWords[1] !== 'if'){
+        elseStatement();
+    }
+    if(splitWords[0]==='else' && splitWords[1]==='if'){
+        elseIfStatement();
+    }
 
     //reset transcript and word array for next line
     transcript = '';
