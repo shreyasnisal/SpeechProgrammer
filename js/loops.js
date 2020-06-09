@@ -34,7 +34,7 @@ function loops() {
   programTextArea.setPosition({lineNumber: programTextArea.getPosition().lineNumber - 1, column: programTextArea.getPosition().columnNumber + 2})
 
   indent++ // added new braces, hence increment indent
-  autoIndent() //call function to implemment auto indent
+  autoIndent() //call function to implement auto indent
 
   programTextArea.focus(); // focus cursor on textarea
 }
