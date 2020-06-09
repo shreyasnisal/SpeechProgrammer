@@ -1,6 +1,6 @@
 function ifStatement() {
 	var statement = 'if ('; //
-	statement += getCondition();  //get condition for if statement
+	statement += getCondition(1);  //get condition for if statement
 	statement += ') {\n\n'; //add closing paranthesis and braces
 
 	//add statement to textarea

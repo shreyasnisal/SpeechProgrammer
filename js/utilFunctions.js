@@ -28,12 +28,13 @@ function insertAtPosition(str, pos, charToInsert) {
 
 
 // get condition for if, for, while statements
-function getCondition() {
+// takes an argument as to which index of the splitWords array to start from
+function getCondition(splitWordsStartIndex) {
 
     var varName = ''; //variable name for condition
     var wordCount = 0; //track if first word of the variable, for camel case
     var condition = ''; //final condition string
-    var i = 1;
+    var i = splitWordsStartIndex; // start from index 1 of the word array
     var conditionLHS = ''; // left side of a relational operator for condition
     var finished = false; // done with the condition, or more logical operators and continue the condition?
 
