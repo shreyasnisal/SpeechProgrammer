@@ -1,6 +1,6 @@
 function loops() {
 
-  var statement = 'while ('; //statement variable contains the entire while-statement including the condition
+  var condition = 'while ('; //statement variable contains the entire while-statement including the condition
   condition += getCondition(1); // get condition and append it to the condition
   condition += ') {\n\n'; // add closing paranthesis and braces to while loop
 
