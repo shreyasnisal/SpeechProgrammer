@@ -34,7 +34,7 @@ function getCondition(splitWordsStartIndex) {
     var varName = ''; //variable name for condition
     var wordCount = 0; //track if first word of the variable, for camel case
     var condition = ''; //final condition string
-    var i = splitWordsStartIndex; // start from index 1 of the word array
+    var i = splitWordsStartIndex; // start from index passed into the function
     var conditionLHS = ''; // left side of a relational operator for condition
     var finished = false; // done with the condition, or more logical operators and continue the condition?
 
