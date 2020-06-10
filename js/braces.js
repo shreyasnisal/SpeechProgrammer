@@ -6,9 +6,7 @@ function braceOut() {
   // iterate from current position to end of the textarea
   for (let i = programTextArea.getPosition().lineNumber; i <= programTextArea.getModel().getLineCount(); i++) {
 
-    // ADD CODE HERE TO SKIP LEADING TABS
-
-    // check if the line content is a brace
+    // check if the last chracter of the line is a closing brace
     if ((programTextArea.getModel().getLineContent(i))[programTextArea.getModel().getLineLength(i) - 1] === '}') {
 
       // set cursor to line of the brace
