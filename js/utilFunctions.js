@@ -70,8 +70,8 @@ function getCondition(splitWordsStartIndex) {
             condition += isNaN(splitWords[i]) ? '\'' + splitWords[i][0] + '\'' : splitWords[i];
         }
 
-        // add symbols accoding to relational operators
-        // INCLUDE NOT EQUALS TO LIST
+        // add symbols according to relational operators
+    
         if (splitWords[i+1] === 'greater' && splitWords[i+2] === 'equals') {
             condition += ' >= ';
             i += 3;
@@ -91,6 +91,10 @@ function getCondition(splitWordsStartIndex) {
         else if (splitWords[i+1] === 'equals') {
             condition += ' == ';
             i += 2;
+        }
+        else if (splitWords[i+1]==='not' && splitWords[i+2] ==='equals'){
+            condition += ' != ';
+            i += 3;
         }
 
 
