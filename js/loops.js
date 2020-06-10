@@ -1,8 +1,8 @@
 function loops() {
 
-  var condition = 'while ('; //statement variable contains the entire while-statement including the condition
-  condition += getCondition(1); // get condition and append it to the condition
-  condition += ') {\n\n'; // add closing paranthesis and braces to while loop
+  var statement = 'while ('; //statement variable contains the entire while-statement including the condition
+  statement += getCondition(1); // get condition and append it to the statement
+  statement += ') {\n\n'; // add closing paranthesis and braces to while loop
 
   // add statement to program textarea
   programTextArea.executeEdits("", [{
@@ -12,7 +12,7 @@ function loops() {
         endLineNumber: programTextArea.getPosition().lineNumber,
         endColumn: programTextArea.getPosition().column
     },
-    text: condition,
+    text: statement,
     forceMoveMarkers: true
   }]);
 

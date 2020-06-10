@@ -41,9 +41,9 @@ function ifStatement() {
 
 //Else statement
 function elseStatement(){
-	var statement = 'else (';
-	statement += getCondition(1);   //Get Condition for the else statement 
-	statement += ') {\n\n';        //Add Closing paranthesis and braces
+	var statement = 'else {\n\n';
+	 
+	       //Add Closing paranthesis and braces
 
 	programTextArea.executeEdits("", [{
 		range: {
