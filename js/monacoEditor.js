@@ -20,8 +20,8 @@ require(["vs/editor/editor.main"], function () {
         theme: 'vs-dark',
         formatOnType: true,
         formatOnPaste: true,
+        automaticLayout: true,
       });
-
 
       programTextArea = editor;
 });

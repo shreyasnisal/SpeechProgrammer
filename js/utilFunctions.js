@@ -28,12 +28,13 @@ function insertAtPosition(str, pos, charToInsert) {
 
 
 // get condition for if, for, while statements
-function getCondition() {
+// takes an argument as to which index of the splitWords array to start from
+function getCondition(splitWordsStartIndex) {
 
     var varName = ''; //variable name for condition
     var wordCount = 0; //track if first word of the variable, for camel case
     var condition = ''; //final condition string
-    var i = 1;
+    var i = splitWordsStartIndex; // start from index passed into the function
     var conditionLHS = ''; // left side of a relational operator for condition
     var finished = false; // done with the condition, or more logical operators and continue the condition?
 
@@ -69,8 +70,8 @@ function getCondition() {
             condition += isNaN(splitWords[i]) ? '\'' + splitWords[i][0] + '\'' : splitWords[i];
         }
 
-        // add symbols accoding to relational operators
-        // INCLUDE NOT EQUALS TO LIST
+        // add symbols according to relational operators
+    
         if (splitWords[i+1] === 'greater' && splitWords[i+2] === 'equals') {
             condition += ' >= ';
             i += 3;
@@ -90,6 +91,10 @@ function getCondition() {
         else if (splitWords[i+1] === 'equals') {
             condition += ' == ';
             i += 2;
+        }
+        else if (splitWords[i+1]==='not' && splitWords[i+2] ==='equals'){
+            condition += ' != ';
+            i += 3;
         }
 
 
