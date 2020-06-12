@@ -14,6 +14,7 @@ var includeStatements;
 var variables = {}; //object containing variables that the user declares
 var splitWords = []; //word array for recognition
 var indent = 0; //indentation level, increment when adding braces
+var doLoopCalled = 0; //To check if a do-while loop is called
 
 
 
@@ -55,7 +56,14 @@ recognition.onresult = function(event) {
         ifStatement();
     }
     if(splitWords[0] === 'while'){
-        loops();
+        whileLoop();
+    }
+    if(splitWords[0]==='do'){
+        doLoop();
+        doLoopCalled=1;
+    }
+    if(splitWords[0]==='for'){
+        forLoop();
     }
     if(splitWords[0]=='out'){
         braceOut();
