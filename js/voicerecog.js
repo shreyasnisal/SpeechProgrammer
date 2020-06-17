@@ -8,7 +8,11 @@ var dataTypes = ['int', 'char', 'float', 'double', 'void'];
 //format specifiers for printf and scanf variables
 var identifiers = {int:'d', float:'f', double:'lf', char:'c'};
 // translation dictionary for pronunciation correction for commonly misinterpreted words
-var translationDictionary = {integer:'int', mean:'main', character:'char', '=':'equals', 'percent':'%', 'backslash':'\\', percentage:'%', line:'\\n'};
+var translationDictionary = {integer:'int', mean:'main', character:'char', '=':'equals', 'percent':'%', 'backslash':'\\', percentage:'%', line:'\\n', 
+};
+// My code
+
+var assignmentOperators = {equals : '=' , multiply : '*', by : '/', minus : '-', '+' : '+', '-' : '-' , 'bi' : '/'};
 var programTextArea; //text area to write programs
 var includeStatements;
 var variables = {}; //object containing variables that the user declares
@@ -27,6 +31,7 @@ recognition.onresult = function(event) {
             // console.log(splitWords);
         }
     }
+    // console.log(splitWords);
 
     // translate apppropriate words using translation dictionary
     for (var i = 0; i < splitWords.length; i++) {
@@ -60,7 +65,14 @@ recognition.onresult = function(event) {
     if(splitWords[0]=='out'){
         braceOut();
     }
-
+    // if (splitWords[0] ==='check'){
+    //     assign();
+    // }
+    camelCasing();
+    if (dictContainsKey(variables, splitWords[0])){
+        
+        assign();
+    }
     //reset transcript and word array for next line
     transcript = '';
     splitWords = [];

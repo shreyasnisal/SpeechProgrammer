@@ -19,8 +19,21 @@ function dictContains(dict, element) {
 
     return false;
 }
+ /////////////////////////////////////////////////// My attempt
+// whether a dictionary contains a key
 
+function dictContainsKey(variables, variable){
+    return variable in variables;
+}
 
+// function camelCasing(){
+//     var i;
+//     var varName = '';
+//     for (i = 0; i < splitWords.length && (splitWords[i] !== 'equals'); i++) {
+//         varName += splitWords[i].replace(/^./, splitWords[i][0].toUpperCase()); //variable name in camel case
+//     }
+//     splitWords[0] = varName;
+// }
 //insert a character at a position in string
 function insertAtPosition(str, pos, charToInsert) {
     return str.substr(0, pos) + charToInsert + str.substr(pos);
