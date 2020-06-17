@@ -5,6 +5,7 @@ function newFunction() {
 
     // function name continues till user says 'takes' and starts giving parameters
     var funcName = splitWords[2];
+    
     for (i = 3; i < splitWords.length && splitWords[i] != 'takes'; i++) {
         funcName += splitWords[i].replace(/^./, splitWords[i][0].toUpperCase()); // Function name should be camel case
     }
