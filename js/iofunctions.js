@@ -60,6 +60,8 @@ function printf() {
         forceMoveMarkers: true
     }]);
 
+    autoIndent();
+
     programTextArea.focus();
 }
 
