@@ -39,7 +39,8 @@ function newVariable() {
         text:  statement,
         forceMoveMarkers: true
     }]);
-
+    
+    lastAddedCode = statement;
     autoIndent(); //call function to implement auto indent
     programTextArea.focus(); // set focus on textarea
 }

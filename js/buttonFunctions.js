@@ -16,7 +16,7 @@ function startStopButton(event) {
         document.getElementById("start_stop_button").innerHTML = "Stop"
         recognition.start();
     }
-    // if recodigition is going on, stop it and change button text to 'Start'
+    // if recognition is going on, stop it and change button text to 'Start'
     else {
         console.log("stop recognition");
         recognizing = false;

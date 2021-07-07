@@ -60,6 +60,8 @@ function printf() {
         forceMoveMarkers: true
     }]);
 
+    lastAddedCode = 'printf("' + printQuote + '"' + printParams + ');\n';
+
     autoIndent();
 
     programTextArea.focus();
@@ -104,6 +106,8 @@ function scanf() {
         text: 'scanf("' + scanQuote + '"' + scanParams + ');\n',
         forceMoveMarkers: true
     }]);
+
+    lastAddedCode = 'scanf("' + scanQuote + '"' + scanParams + ');\n';
 
     autoIndent() // call function to implement indentation for next line
 

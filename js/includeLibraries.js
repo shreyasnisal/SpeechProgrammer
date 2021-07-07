@@ -22,6 +22,7 @@ function includeLibrary() {
     //only move marker if this is the first library we are including. Otherwise, leave the cursor in the middle of the program
     forceMoveMarkers: programTextArea.getPosition().lineNumber === 1 ? true : false
   }]);
+  lastAddedCode = '#include <' + libName + '.h>\n';
 
   includeStatements += '#include <' + libName + '.h>\n';
 }

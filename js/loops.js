@@ -17,6 +17,7 @@ function whileLoop() {
       },
     ]);
     doLoopCalled=0;
+    lastAddedCode = statement;
 
     autoIndent(); //implement indentation for closing brace
   } else {
@@ -37,6 +38,7 @@ function whileLoop() {
         forceMoveMarkers: true,
       },
     ]);
+    lastAddedCode = statement;
 
     autoIndent(); //implement indentation for closing brace
 
@@ -53,6 +55,8 @@ function whileLoop() {
         forceMoveMarkers: true,
       },
     ]);
+    lastAddedCode += '}';
+
     // set cursor to between the braces
     programTextArea.setPosition({
       lineNumber: programTextArea.getPosition().lineNumber - 1,
@@ -84,6 +88,8 @@ function doLoop() {
     },
   ]);
 
+  lastAddedCode = statement;
+
   autoIndent(); //implement indentation for closing brace
 
   //add closing brace to textarea
@@ -99,6 +105,7 @@ function doLoop() {
       forceMoveMarkers: true,
     },
   ]);
+  lastAddedCode += '}';
 
   // set cursor to between the braces
   programTextArea.setPosition({

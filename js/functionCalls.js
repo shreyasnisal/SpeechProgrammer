@@ -31,6 +31,7 @@ function callFunctions() {
         text: functionStatement + '\n',
         forceMoveMarkers: true
     }]);
+    lastAddedCode = functionStatement + '\n';
 
     autoIndent();
 

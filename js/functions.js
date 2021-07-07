@@ -50,6 +50,7 @@ function newFunction() {
         text: '\n' + returnType + ' ' + funcName + '(' + argumentString + ') {\n' + '\n',
         forceMoveMarkers: true
     }]);
+    lastAddedCode = '\n' + returnType + ' ' + funcName + '(' + argumentString + ') {\n' + '\n';
 
     autoIndent() // implement indentation for closing brace
 
@@ -64,10 +65,12 @@ function newFunction() {
   		text: '}',
   		forceMoveMarkers: true
   	}]);
+      
+    lastAddedCode+='}';
 
     programTextArea.setPosition({lineNumber: programTextArea.getPosition().lineNumber - 1, column: 4}) // set cursor between braces
     indent++; // since we added new braces, increment indent
     autoIndent(); // call function to implement indent
-    programTextArea.focus() //focus on textare
+    programTextArea.focus() //focus on textarea
 
 }

@@ -158,4 +158,6 @@ function autoIndent() {
       text: indentText,
       forceMoveMarkers: true
   }]);
+  
+  lastAddedCode += indentText; //If a call to a function added indents, we need to take care of them as well in undo.
 }

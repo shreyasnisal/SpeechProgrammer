@@ -16,6 +16,7 @@ function ifStatement() {
 		text: statement,
 		forceMoveMarkers: true
 	}]);
+	lastAddedCode = statement;
 
 	autoIndent() //implement indentation for closing brace of if statement
 
@@ -30,6 +31,7 @@ function ifStatement() {
 		text: '}',
 		forceMoveMarkers: true
 	}]);
+	lastAddedCode +='}';
 
 	//reset cursor to between braces
 	programTextArea.setPosition({lineNumber: programTextArea.getPosition().lineNumber - 1, column: programTextArea.getPosition().columnNumber + 2})
@@ -56,7 +58,8 @@ function elseStatement(){
 		text: statement,
 		forceMoveMarkers: true
 	}]);
-
+	
+	lastAddedCode = statement;
 	autoIndent() //implement indentation for closing brace of if statement
 
 	// add closing brace to textarea
@@ -70,6 +73,7 @@ function elseStatement(){
 		text: '}',
 		forceMoveMarkers: true
 	}]);
+	lastAddedCode +='}';
 
 
 	//reset cursor to between braces
@@ -99,6 +103,7 @@ function elseIfStatement(){
 		text: statement,
 		forceMoveMarkers: true
 	}]);
+	lastAddedCode = statement;
 
 	autoIndent() //implement indentation for closing brace of if statement
 
@@ -113,6 +118,7 @@ function elseIfStatement(){
 		text: '}',
 		forceMoveMarkers: true
 	}]);
+	lastAddedCode +='}';
 
 
 	//reset cursor to between braces

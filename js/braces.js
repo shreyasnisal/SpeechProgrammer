@@ -1,12 +1,12 @@
 
-// function to come out of closes brace
-// called when the user says the 'out'
+// function to come out of closed braces
+// called when the user says  'out'
 function braceOut() {
 
   // iterate from current position to end of the textarea
   for (let i = programTextArea.getPosition().lineNumber; i <= programTextArea.getModel().getLineCount(); i++) {
 
-    // check if the last chracter of the line is a closing brace
+    // check if the last character of the line is a closing brace
     if ((programTextArea.getModel().getLineContent(i))[programTextArea.getModel().getLineLength(i) - 1] === '}') {
 
       // set cursor to line of the brace
@@ -23,7 +23,7 @@ function braceOut() {
         text: '\n',
         forceMoveMarkers: true
       }])
-
+      lastAddedCode = '\n';
       indent-- // got out of a brace, so decrement indent
       autoIndent() // call function to implement indentation
 
