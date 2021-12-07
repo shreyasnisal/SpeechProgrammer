@@ -4,6 +4,7 @@
 [![Last Commit](https://img.shields.io/github/last-commit/shreyasnisal/SpeechProgrammer)](https://img.shields.io/github/last-commit/shreyasnisal/SpeechProgrammer)
 [![Open Issues](https://img.shields.io/github/issues-raw/shreyasnisal/SpeechProgrammer)](https://img.shields.io/github/issues-raw/shreyasnisal/SpeechProgrammer)
 [![Followers](https://img.shields.io/github/followers/shreyasnisal?style=social)](https://img.shields.io/github/followers/shreyasnisal?style=social)
+[![](https://img.shields.io/youtube/views/wVmPpP95EgM?style=social)](https://img.shields.io/youtube/views/wVmPpP95EgM?style=social)
 
 Speech Programmer is a web app which generates code from speech. Current support is only for code in C language, and the speaker has to follow specific rules while speaking.
 
