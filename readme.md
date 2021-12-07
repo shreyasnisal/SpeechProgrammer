@@ -1,6 +1,11 @@
 # Speech Programmer
 
-Speech Programmer is a web app which generates code from speech. Current support is only for code in C language, and the speaker has to follow specific rules while speaking. You could try out the live app here(https://www.shreyasnisal.com/SpeechProgrammer/).
+[![Contributors](https://img.shields.io/github/contributors/shreyasnisal/SpeechProgrammer)](https://img.shields.io/github/contributors/shreyasnisal/SpeechProgrammer)
+[![Last Commit](https://img.shields.io/github/last-commit/shreyasnisal/SpeechProgrammer)](https://img.shields.io/github/last-commit/shreyasnisal/SpeechProgrammer)
+[![Open Issues](https://img.shields.io/github/issues-raw/shreyasnisal/SpeechProgrammer)](https://img.shields.io/github/issues-raw/shreyasnisal/SpeechProgrammer)
+[![Followers](https://img.shields.io/github/followers/shreyasnisal?style=social)](https://img.shields.io/github/followers/shreyasnisal?style=social)
+
+Speech Programmer is a web app which generates code from speech. Current support is only for code in C language, and the speaker has to follow specific rules while speaking.
 
 ## Running the app
 
